@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="Student_detail_tree" model="ir.ui.view">
+        <field name="name">Student_detail_tree</field>
+        <field name="model">school.student</field>
+
+        <field name="arch" type="xml">
+            <tree ><!--editable="bottom"-->
+                <field name="surname"/>
+                <field name="student_name"/>
+                <field name="father_name"/>
+                <field name="age"/>
+                <field name="gender"/>
+            </tree>
+
+        </field>
+    </record>
+
+    <record id="Student_detail_search" model="ir.ui.view">
+        <field name="name">Student_detail_search</field>
+        <field name="model">school.student</field>
+
+        <field name="arch" type="xml">
+            <search>
+                <field name="student_name" />
+                <field name="age"/>
+                <field name="std"/>
+                <field name="gender"/>
+                <filter name="filter_male" string="Male" domain="[('gender','=','male')]"/>
+                <filter name="filter_female" string="Female" domain="[('gender','=','female')]"/>
+<!--                <separator/>-->
+<!--                <filter name="filter_kid" string="Kids" domain="[('age','&lt;=','20')]"/>-->
+                <group expand="0" string="Group By">
+                    <filter name="group_gender" string="Gender" domain="[]" context="{'group_by':'gender'}"/>
+<!--                    <filter name="group_age" string="Age" domain="[]" context="{'group_by':'age'}"/>-->
+<!--                    <filter name="group_name" string="Student Name" domain="[]" context="{'group_by':'student_name'}"/>-->
+                </group>
+                <searchpanel>
+                    <field name="gender" string="Gender" enable_counter="1"/>
+                </searchpanel>
+            </search>
+
+        </field>
+    </record>
+
+    <record id="Student_detail_form" model="ir.ui.view">
+        <field name="name">Student_detail_form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>Student Details</h1>
+                    </div>
+                    <field name="image" widget="image" class="oe_avtar"/>
+                        <group>
+                            <field name="surname"/>
+                            <field name="student_name"/>
+                            <field name="father_name"/>
+                            <field name="religion"/>
+                        </group>
+
+                        <group>
+                            <field name="age"/>
+                            <field name="birth_date"/>
+                            <field name="std"/>
+                            <field name="gender"/>
+                            <field name="s_course_id"/>
+                        </group>
+
+                    <div class = "oe_title">
+                        <h1>Current Address</h1>
+                    </div>
+                    <group>
+                            <field name="current_house_no"/>
+                            <field name="current_street"/>
+                            <field name="current_area"/>
+                            <field name="current_city"/>
+                            <field name="current_taluka"/>
+                            <field name="current_dis"/>
+                            <field name="current_pincode"/>
+                            <field name="current_state"/>
+                            <field name="current_country_id"/>
+
+                    </group>
+                    <group>
+                        <field name="as_per_current_address"/>
+                    </group>
+                    <div class = "oe_title">
+                        <h1>Permanent Address</h1>
+                    </div>
+                    <group>
+
+                            <field name="house_no"/>
+                            <field name="street"/>
+                            <field name="area"/>
+                            <field name="city"/>
+                            <field name="taluka"/>
+                            <field name="dis"/>
+                            <field name="pincode"/>
+                            <field name="state"/>
+                            <field name="country"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+</odoo>
+

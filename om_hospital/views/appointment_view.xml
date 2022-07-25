@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="Hospital_Patient_Appointment_tree" model="ir.ui.view">
+        <field name="name">Hospital Patient Appointment Tree</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="patient_id"/>
+                <field name="gender"/>
+                <field name="age"/>
+                <field name="appointment_time"/>
+                <field name="booking_date"/>
+                <field name="ref"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="Hospital_Patient_Appointment_search" model="ir.ui.view">
+        <field name="name">Hospital Patient Appointment Search</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="patient_id"/>
+                <field name="gender"/>
+                <field name="age"/>
+                <field name="appointment_time"/>
+                <field name="booking_date"/>
+                <field name="ref"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="Hospital_Patient_Appointment_form" model="ir.ui.view">
+        <field name="name">Hospital Patient Appointment</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+                <form string = "Patient Appointment detail">
+                    <sheet>
+                        <group>
+                            <field name="patient_id"/>
+                            <field name="gender"/>
+                            <field name="age"/>
+                            <field name="appointment_time"/>
+                            <field name="booking_date"/>
+                            <field name="ref"/>
+                        </group>
+                        <notebook>
+                            <page string="Prescription">
+                                <field name="prescription"/>
+                                <button name="active_search" string="Confirm" type="object"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+        </field>
+    </record>
+
+
+</odoo>

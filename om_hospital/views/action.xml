@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="action_patient" model="ir.actions.act_window">
+        <field name="name">Patient Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.patient</field>
+<!--        <field name="context">{'default_gender':'male'}</field>-->
+        <field name="view_mode">tree,search,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add Patient
+            </p>
+        </field>
+    </record>
+    <record id="action_appointment1" model="ir.actions.act_window">
+        <field name="name">Patient Appointment Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.appointment</field>
+<!--        <field name="context">{'default_gender':'male'}</field>-->
+        <field name="view_mode">tree,search,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add Patient Appointment
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

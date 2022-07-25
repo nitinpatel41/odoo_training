@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="action_student" model="ir.actions.act_window">
+            <field name="name">Student Details</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.student</field>
+            <field name="view_mode">tree,search,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add Student
+                </p>
+            </field>
+        </record>
+
+
+        <record id="action_course" model="ir.actions.act_window">
+            <field name="name">Course Detail</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.course</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Select Course
+                </p>
+            </field>
+        </record>
+
+
+
+        <record id="action_subject" model="ir.actions.act_window">
+            <field name="name">Subject Details</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.subject</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_sub1':'Maths'}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Enter Subject
+                </p>
+            </field>
+        </record>
+
+        <record id="action_country" model="ir.actions.act_window">
+            <field name="name">Country Details</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">student.country</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Enter Country
+                </p>
+            </field>
+        </record>
+
+</odoo>

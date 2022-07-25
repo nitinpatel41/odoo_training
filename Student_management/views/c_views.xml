@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="Course_detail_tree" model="ir.ui.view">
+        <field name="name">Course_detail_tree</field>
+        <field name="model">school.course</field>
+        <field name="arch" type="xml">
+                <tree string = "Course detail">
+                    <field name="course_name"/>
+                </tree>
+        </field>
+    </record>
+
+
+    <record id="Course_detail_form" model="ir.ui.view">
+        <field name="name">Course_detail_form</field>
+        <field name="model">school.course</field>
+        <field name="arch" type="xml">
+            <form string = "Course detail">
+                <sheet>
+                    <group>
+                        <field name="course_name" string = "Course Name"/>
+                    </group>
+                    <group>
+                        <field name="student_course_ids"/>
+                        <field name="course_fee" string="Course Fee"/>
+                        <field name="bus_fee" string="Bus Fee"/>
+                        <field name="total_fee" string="Total Fee"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

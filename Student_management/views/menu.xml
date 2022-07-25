@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_main"
+              name="Student_Management"
+              sequence="0"/>
+    <menuitem id="menu_School"
+              name="School"
+              parent="menu_main"
+              sequence="0"/>
+    <menuitem id="menu_Student"
+              name="Student"
+              action="action_student"
+              parent = "menu_School"
+              sequence="0"/>
+    <menuitem id="menu_Course"
+              name="Course"
+              action = "action_course"
+              parent = "menu_School"
+              sequence="0"/>
+    <menuitem id="menu_Subject"
+              name="Subject"
+              action="action_subject"
+              parent = "menu_School"/>
+    <menuitem id="menu_Country"
+              name="Country"
+              action="action_country"
+              parent = "menu_School"/>
+
+</odoo>
