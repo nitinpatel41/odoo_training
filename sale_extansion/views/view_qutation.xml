@@ -8,6 +8,18 @@
         <field name="arch" type="xml">
                     <xpath expr="//field[@name='partner_id']" position="after">
                         <field name="contact"/>
+                        <field name="ave"/>
+                    </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_profit" model="ir.ui.view">
+        <field name="name">sale.order.profit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+                    <xpath expr="//field[@name='order_line']//tree//field[@name='price_unit']" position="after">
+                        <field name="profit"/>
                     </xpath>
         </field>
     </record>
