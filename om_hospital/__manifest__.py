@@ -11,7 +11,9 @@
         'views/action.xml',
         'views/menu.xml',
         'views/patient_view.xml',
-        'views/appointment_view.xml'
+        'views/doctor_view.xml',
+        'views/appointment_view.xml',
+        'security/security.xml',
 
     ],
     'demo': [],

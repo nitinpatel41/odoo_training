@@ -16,7 +16,7 @@
         <field name="name">Course_detail_form</field>
         <field name="model">school.course</field>
         <field name="arch" type="xml">
-            <form string = "Course detail">
+            <form string = "Course detail" create="false">
                 <sheet>
                     <group>
                         <field name="course_name" string = "Course Name"/>

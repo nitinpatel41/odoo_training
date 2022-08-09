@@ -27,5 +27,18 @@
         </field>
     </record>
 
+        <record id="action_doctor" model="ir.actions.act_window">
+        <field name="name">Patient Doctor Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.doctor</field>
+<!--        <field name="context">{'default_gender':'male'}</field>-->
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add Doctor
+            </p>
+        </field>
+    </record>
+
 
 </odoo>

@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access.school.student,access_school_student,student_management.model_school_student,base.group_user,1,1,1,1
-access.school.course,access_school_course,student_management.model_school_course,base.group_user,1,1,1,1
-access.school.subject,access_school_subject,student_management.model_school_subject,base.group_user,1,1,1,1
-access.student.country,access_student_country,student_management.model_student_country,base.group_user,1,1,1,1
+access.school.student,access_school_student,model_school_student,base.group_user,1,1,1,1
+access.school.course,access_school_course,model_school_course,base.group_user,1,1,1,1
+access.school.subject,access_school_subject,model_school_subject,base.group_user,1,1,1,1
+access.student.country,access_student_country,model_student_country,base.group_user,1,1,1,1

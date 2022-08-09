@@ -39,6 +39,7 @@
                     <sheet>
                         <group>
                             <field name="patient_id"/>
+                            <field name="patient_ids" widget="many2many_tags"/>
                             <field name="gender"/>
                             <field name="age"/>
                             <field name="appointment_time"/>
@@ -48,7 +49,7 @@
                         <notebook>
                             <page string="Prescription">
                                 <field name="prescription"/>
-                                <button name="active_search" string="Confirm" type="object"/>
+<!--                                <button name="active_search" string="Confirm" type="object"/>-->
                             </page>
                         </notebook>
                     </sheet>

@@ -20,3 +20,5 @@ class Subject(models.Model):
         ('2', 'High'),
         ('3', 'Very High')], string="Priority"
     )
+
+

@@ -8,9 +8,9 @@ class Student(models.Model):
     _name = "school.student"
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Student Detail"
-    _rec_name = "student_name"
+    # _rec_name = "student_name"
 
-    surname = fields.Char(string="Student Surname", required=True, tracking=True)
+    surname = fields.Char(string="Student Surname")
     student_name = fields.Char(string="Student Name")
     father_name = fields.Char(string="Father Name", tracking=True)
     religion = fields.Html(string="Religion", required=True, copy=False, )
@@ -21,6 +21,7 @@ class Student(models.Model):
     birth_date = fields.Date(string="Birth Date")
     age = fields.Integer(string="Age", compute="calculate_age")
 
+    @api.depends('birth_date')
     def calculate_age(self):
         for rec in self:
             if rec.birth_date:
@@ -77,3 +78,14 @@ class Student(models.Model):
                 rec.country = rec.current_country_id
 
     s_course_id = fields.Many2one("school.course", string="Enter Stream")
+
+    state1 = fields.Selection([('abc', 'Abc'),
+                               ('pqr', 'Pqr'),
+                               ('xyz', 'Xyz')])
+
+    def name_get(self):
+        student_list = []
+        for rec in self:
+            name = str(rec.surname) + str(rec.student_name)
+            student_list.append((rec.id, name))
+        return student_list
